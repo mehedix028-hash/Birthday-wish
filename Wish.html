@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Birthday Wish</title>
+
+<style>feDiffuseLighting
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background: #08000f;
+  font-family: monospace;
+  color: white;
+}
+
+/* Background */
+.background {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 40%,
+      #4b075c 0%,
+      #170025 35%,
+      #08000f 75%);
+}
+
+/* Glow */
+.glow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  background: #ff4fd8;
+  border-radius: 50%;
+  filter: blur(130px);
+  opacity: .18;
+  animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    transform: translate(-50%, -50%) scale(.8);
+  }
+
+  to {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+
+/* Main */
+.container {
+  position: relative;
+  z-index: 5;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+/* Small text */
+.small {
+  font-size: 14px;
+  letter-spacing: 4px;
+  color: #ff8be8;
+
+  text-shadow:
+    0 0 10px #ff4fd8;
+
+  animation: fade 2s infinite alternate;
+}
+
+@keyframes fade {
+  from {
+    opacity: .3;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Birthday */
+.birthday {
+  margin-top: 20px;
+
+  font-size: 38px;
+  font-weight: bold;
+
+  color: #fff;
+
+  text-shadow:
+    0 0 10px #ff4fd8,
+    0 0 25px #ff4fd8,
+    0 0 50px #ff4fd8;
+
+  animation: title 2s infinite alternate;
+}
+
+@keyframes title {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.08);
+  }
+}
+
+/* Cake */
+.cake {
+  margin-top: 25px;
+  font-size: 80px;
+
+  filter:
+    drop-shadow(0 0 15px #ff4fd8);
+
+  animation:
+    cake 1.5s infinite alternate;
+}
+
+@keyframes cake {
+  from {
+    transform: translateY(12);
+  }
+
+  to {
+    transform: translateY(-12px);
+  }
+}
+
+/* Name */
+.name {
+  margin-top: 15px;
+
+  font-size: 28px;
+
+  color: #ffb7f1;
+
+  text-shadow:
+    0 0 10px #ff4fd8,
+    0 0 30px #ff4fd8;
+}
+
+/* Message */
+.message {
+  width: 85%;
+  max-width: 500px;
+
+  margin-top: 20px;
+
+  padding: 18px;
+
+  border: 1px solid #ff4fd8;
+  border-radius: 15px;
+
+  background: #ffffff08;
+
+  box-shadow:
+    0 0 20px #ff4fd855,
+    inset 0 0 20px #ff4fd811;
+
+  font-size: 15px;
+  line-height: 1.7;
+
+  color: #fff;
+}
+
+/* Button */
+.button {
+  margin-top: 22px;
+
+  padding: 10px 25px;
+
+  border: 1px solid #ff4fd8;
+  border-radius: 30px;
+
+  color: #ffb7f1;
+
+  box-shadow:
+    0 0 15px #ff4fd866;
+
+  animation:
+    pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  50% {
+    transform: scale(1.08);
+    box-shadow:
+      0 0 30px #ff4fd8aa;
+  }
+}
+
+/* Floating particles */
+.particle {
+  position: fixed;
+
+  bottom: -20px;
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #ff72df;
+
+  box-shadow:
+    0 0 10px #ff72df;
+
+  animation:
+    float linear infinite;
+}
+
+@keyframes float {
+  to {
+    transform:
+      translateY(-110vh)
+      translateX(60px);
+
+    opacity: 0;
+  }
+}
+
+/* Hearts */
+.heart {
+  position: fixed;
+
+  color: #ff65d8;
+
+  font-size: 20px;
+
+  animation:
+    heartFloat 5s linear infinite;
+
+  text-shadow:
+    0 0 10px #bf134c;
+}
+
+@keyframes heartFloat {
+  from {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-20vh);
+    opacity: 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="background">
+  <div class="glow"></div>
+</div>
+
+<div class="container">
+
+
+  
+<div class="button"> 12:00 </div>
+
+
+
+  
+  <div class="small">
+    ✨ TODAY IS YOUR SPECIAL DAY ✨
+  </div>
+
+  <div class="birthday">
+    HAPPY BIRTHDAY
+  </div>
+
+  <div class="Cake">
+    🎂
+  </div>
+
+
+  <!-- এখানে নাম পরিবর্তন করো -->
+  <div class="name">
+    My Dear Bow❤️
+  </div>
+
+  <div class="message">
+    শুভ জন্মদিন! 🎂🎉
+তোমার জীবনের প্রতিটা দিন আনন্দ, হাসি আর ভালোবাসায় ভরে উঠুক। তোমার সব স্বপ্ন পূরণ হোক, আর সবসময় ভালো থেকো। ❤️✨
+অনেক অনেক শুভকামনা রইলো তোমার জন্য। 🥳🎈
+    <br><br>
+    you are my special parson in my life..🥹❤️‍🩹
+  </div>
+
+  <div class="button">
+ Onek onek valobasi tumare..🥹❤️‍🩹🫂
+    <div class="massage"></div>
+    </div>
+    
+  i love you bow..🫠🤍🫶
+</div>
+
+<script>
+
+/* Particles */
+
+for (let i = 0; i < 35; i++) {
+
+  let p = document.createElement("div");
+
+  p.className = "particle";
+
+  p.style.left =
+    Math.random() * 100 + "vw";
+
+  p.style.animationDuration =
+    (3 + Math.random() * 5) + "s";
+
+  p.style.animationDelay =
+    Math.random() * 5 + "s";
+
+  document.body.appendChild(p);
+}
+
+
+/* Hearts */
+
+for (let i = 0; i < 15; i++) {
+
+  let h = document.createElement("div");
+
+  h.className = "heart";
+
+  h.innerHTML = "♥";
+
+  h.style.left =
+    Math.random() * 100 + "vw";
+
+  h.style.animationDelay =
+    Math.random() * 5 + "s";
+
+  h.style.animationDuration =
+    (4 + Math.random() * 4) + "s";
+
+  document.body.appendChild(h);
+}
+
+</script>
+
+</body>
+</html>
