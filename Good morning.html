@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Good Morning ❤️</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:Arial, sans-serif;
+  background:linear-gradient(135deg,#ffcf70,#ff8c8c,#a98bff);
+  overflow:hidden;
+}
+
+.card{
+  width:90%;
+  max-width:420px;
+  padding:45px 25px;
+  text-align:center;
+  border-radius:30px;
+  background:rgba(255,255,255,0.18);
+  backdrop-filter:blur(12px);
+  box-shadow:0 15px 40px rgba(0,0,0,0.25);
+  color:white;
+}
+
+.sun{
+  font-size:75px;
+  animation:float 3s ease-in-out infinite;
+}
+
+h1{
+  font-size:42px;
+  margin:15px 0;
+  text-shadow:0 4px 12px rgba(0,0,0,.25);
+}
+
+.name{
+  font-size:28px;
+  color:#fff4a8;
+  margin-bottom:20px;
+}
+
+.message{
+  font-size:18px;
+  line-height:1.7;
+}
+
+.heart{
+  font-size:30px;
+  margin-top:20px;
+  animation:beat 1.2s infinite;
+}
+
+button{
+  margin-top:25px;
+  padding:13px 25px;
+  border:none;
+  border-radius:30px;
+  font-size:17px;
+  cursor:pointer;
+  background:white;
+  color:#ff6b81;
+  box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+button:active{
+  transform:scale(.95);
+}
+
+#extra{
+  display:none;
+  margin-top:20px;
+  font-size:17px;
+  line-height:1.6;
+}
+
+.cloud{
+  position:absolute;
+  font-size:55px;
+  opacity:.6;
+  animation:move 15s linear infinite;
+}
+
+.c1{top:10%; left:-100px;}
+.c2{top:25%; left:-200px; animation-delay:6s;}
+
+@keyframes float{
+  50%{transform:translateY(-12px);}
+}
+
+@keyframes beat{
+  50%{transform:scale(1.3);}
+}
+
+@keyframes move{
+  from{transform:translateX(0);}
+  to{transform:translateX(120vw);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="cloud c1">☁️</div>
+<div class="cloud c2">☁️</div>
+
+<div class="card">
+
+  <div class="sun">🌅</div>
+
+  <h1>Good Morning ☀️</h1>
+
+  <div class="name">Sona bow..💋💋</div>
+
+  <div class="message">
+    নতুন একটা সকাল মানেই<br>
+    নতুন কিছু সুন্দর মুহূর্ত। 🌸<br><br>
+
+    তোমার আজকের দিনটা হোক<br>
+    হাসি, আনন্দ আর ভালোবাসায় ভরা। 💕
+  </div>
+
+  <div class="heart">❤️</div>
+
+  <button onclick="showMessage()">একটা কথা শুনবে? চাপ দেও🫠 💌</button>
+
+  <div id="extra">
+    
+     i love you Bow...🫶💋❤️‍🩹🫂<br><br>
+    <b>onek onek valobasi tumare..🥹🫶🫂❤️‍🩹🌷</b>
+  </div>
+
+</div>
+
+<script>
+function showMessage(){
+  document.getElementById("extra").style.display="block";
+}
+</script>
+
+</body>
+</html>>
